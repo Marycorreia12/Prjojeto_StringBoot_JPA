@@ -20,7 +20,7 @@ public class Order implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private Instant moment;
 	private OrderStatus orderStatus;
 	
@@ -30,17 +30,17 @@ public class Order implements Serializable{
 	
 	public Order() {}
 	
-	public Order(Integer id, Instant moment, OrderStatus orderStatus,  User user) {
+	public Order(Long id, Instant moment, OrderStatus orderStatus,  User user) {
 		this.id = id;
 		this.moment = moment;
 		this.orderStatus = orderStatus;
 		this.user = user;
 	}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public Instant getInstant() {
